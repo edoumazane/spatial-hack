@@ -1,26 +1,27 @@
 # `spatialdata` 3D @ scverse hackathon
 
+![video](assets/videos/view_surfaces.gif)
 ![graph representation](assets/images/graph.png)
 ![surface representation](assets/images/surface.png)
-![video](assets/videos/view_surfaces.gif)
 
 
 ## Installation
 
 ```bash
 mkdir -p ~/code/scverse
-cd ~/code/scverse
-git clone git@github.com:edoumazane/spatial-3d-hack.git
-cd ~/code/scverse/spatial-3d-hack
+cd $_
+git clone git@github.com:edoumazane/spatial-hack.git
+cd ~/code/scverse/spatial-hack
+conda env create -f environment.yaml
 ```
 
 ## Download Fang et al., 2024 preprint data (derived)
 
 ```bash
-cd ~/code/scverse/spatial-3d-hack
-conda env create -f environment_gdown.yml
+cd ~/code/scverse/spatial-hack
+conda env create -f environment_gdown.yaml
 
-mkdir -p  ~/code/scverse/spatial-3d-hack/data/Fang_preprint/mouse_cortex_100um
+mkdir -p  ~/code/scverse/spatial-hack/data/Fang_preprint/mouse_cortex_100um
 cd $_
 conda activate gdown
 gdown "https://drive.google.com/uc?export=download&id=15kTpS4RksoiIwMnCN_cVSYqdPsaWgXOe"
@@ -39,7 +40,7 @@ mkdir -p $DATA_DIR/original/
 
 [GitHub repo: Open-ST: open-source spatial transcriptomics](https://github.com/rajewsky-lab/openst)
 ```bash
-cd ~/code/scverse/spatial-3d-hack/scripts
+cd ~/code/scverse/spatial-hack/scripts
 conda activate napari-spatialdata
 python view_shapes.py
 ``` -->
