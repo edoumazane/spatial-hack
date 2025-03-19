@@ -44,3 +44,40 @@ cd ~/code/scverse/spatial-hack/scripts
 conda activate napari-spatialdata
 python view_shapes.py
 ``` -->
+
+
+```bash
+cd ~/code/scverse/spatial-hack
+conda env create -f environment_abc.yaml
+```
+
+
+# To work on quentinblampey's fork
+
+~```bash
+cd ~/code/scverse
+mv spatialdata spatialdata_scverse
+git clone git@github.com:quentinblampey/spatialdata.git
+cd spatial-hack
+conda env create -f environment.yaml
+cd ../spatialdata
+conda activate napari-spatialdata
+pip install -e .
+```~
+
+```bash
+cd ~/code/scverse
+mv spatialdata spatialdata_scverse
+git clone git@github.com:quentinblampey/spatialdata.git
+cd ~/code/scverse/spatial-hack
+conda env create -f environment_spatialdata_dev.yaml
+cd ~/code/scverse/spatialdata
+conda activate spatialdata-dev
+pip install -e .
+pip install vedo
+
+
+
+conda deactivate
+conda env remove -n spatialdata-dev -y
+```

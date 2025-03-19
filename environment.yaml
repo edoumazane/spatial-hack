@@ -1,7 +1,6 @@
 name: napari-spatialdata
 channels:
   - conda-forge
-  - defaults
 dependencies:
   - python=3.12
   - pip
@@ -10,3 +9,6 @@ dependencies:
     - napari-spatialdata[all]
     - paramiko
     - sshfs==2024.9.0
+    - vedo
+    - napari-animation
+    - ipywidgets

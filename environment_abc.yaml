@@ -1,0 +1,16 @@
+# conda env create -f environment.yaml
+# conda env update -f environment.yaml
+
+name: abc
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - ipykernel
+  - natsort
+  - pip
+  - pip:
+    - "abc_atlas_access[notebooks] @ git+https://github.com/alleninstitute/abc_atlas_access.git"
+    - pyyaml
+    - requests
+    - pyarrow
