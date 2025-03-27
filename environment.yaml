@@ -7,8 +7,7 @@ dependencies:
   - ipykernel
   - pip:
     - napari-spatialdata[all]
-    - paramiko
-    - sshfs==2024.9.0
     - vedo
+    - pyvista
     - napari-animation
     - ipywidgets
